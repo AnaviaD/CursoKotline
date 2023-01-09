@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fecha: String = "05/06/1990"
+        val fecha: String = "01/06/1990"
         var nombre: String = "jota"
         var vip: Boolean = false
         var inicial: Char = 'J'
@@ -23,11 +23,40 @@ class MainActivity : AppCompatActivity() {
         if(vip == true) saludo += "Te queremos mucho"
         else saludo += "Quieres ser vip prro?"
 
+        var dia:Int = fecha.subSequence(0, 2).toString().toInt()
+        if (dia==1) ingresar_sueldo()
+        var mes:Int = fecha.subSequence(3, 5).toString().toInt()
 
-        println(fecha)
-        println("Hola " + nombre)
+        when(mes){
+            //1 ->
+            1, 2, 3 -> println("\n En invierno no hay ofertas de inversiones")
+            4, 5, 6 -> println("\n En primavera no hay ofertas de inversiones")
+            7, 8, 9 -> println("\n En verano hay ofertas del 2.5")
+            10,11,12 -> println("\n En otoño hay ofertas del 3.5")
+            else -> println("\n revisa tus fechas :v")
+        }
+
         println(saludo)
 
+        var pin:Int = 1234
+        var intentos:Int = 0
+        var clave_ingresada:Int = 1232
+
+        do{
+            println("Ingresa el PIN: ")
+            println("Clave ingresada: ${clave_ingresada++}")
+            //Utilizar BREAK
+            if (clave_ingresada == pin)break
+            //Utilizar BREAK
+            intentos ++
+        }while ((intentos < 3) && (clave_ingresada != pin))
+
+        if (intentos == 3) println("Tarjeta bloqueada")
+
+        mostrar_saldo()
+        ingresar_dinero(50.00f)
+        retirar_dinero(40f)
+/*
         var a:Int = 5 + 5 //10
         val b:Int = 10 - 2
         val c:Int = 3 * 4
@@ -60,8 +89,31 @@ class MainActivity : AppCompatActivity() {
         saldo += sueldo
 
         a==b
-
+*/
 
 
     }
+
+    fun mostrar_saldo(){
+        println("Tienes $saldo $moneda")
+    }
+
+    fun ingresar_sueldo(){
+        saldo += sueldo
+        println("Se ha ingresado tu sueldo $sueldo $moneda")
+        mostrar_saldo()
+    }
+
+    fun ingresar_dinero(cantidad: Float){
+        saldo += cantidad
+        println("Se ha ingresado $sueldo $moneda")
+        mostrar_saldo()
+    }
+
+    fun retirar_dinero(cantidad: Float){
+        saldo -= cantidad
+        println("Se ha hecho una retirada de $sueldo $moneda")
+        mostrar_saldo()
+    }
+
 }
