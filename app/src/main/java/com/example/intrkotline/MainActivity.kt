@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     var saldo: Float = 300.54f
     var sueldo: Float = 764.82f
     var entero: Int = 62
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         var vip: Boolean = false
         var inicial: Char = 'J'
 
+        /*
         var saludo: String = "Hola " + nombre + " " + saldo.toString()
         if(vip == true) saludo += "Te queremos mucho"
         else saludo += "Quieres ser vip prro?"
@@ -53,11 +55,15 @@ class MainActivity : AppCompatActivity() {
 
         if (intentos == 3) println("Tarjeta bloqueada")
 
+         */
 
         mostrar_saldo()
         ingresar_dinero(50.00f)
         retirar_dinero(40f)
-/*
+
+        retirar_dinero(50f)
+        retirar_dinero(200f)
+        /*
         var a:Int = 5 + 5 //10
         val b:Int = 10 - 2
         val c:Int = 3 * 4
@@ -90,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         saldo += sueldo
 
         a==b
-*/
+        */
 
 
     }
@@ -112,9 +118,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun retirar_dinero(cantidad: Float){
-        saldo -= cantidad
-        println("Se ha hecho una retirada de $sueldo $moneda")
-        mostrar_saldo()
+        if (verificarCantidad(cantidad)){
+            saldo -= cantidad
+            println("Se ha hecho una retirada de $sueldo $moneda")
+            mostrar_saldo()
+        }
+        else println("Cantidad superior al saldo. Porfavor no sea pobre")
+
+    }
+
+    fun verificarCantidad(cantidad: Float):Boolean{
+        if (cantidad > saldo) return false
+        else return true
     }
 
 }
