@@ -63,6 +63,19 @@ class MainActivity : AppCompatActivity() {
 
         retirar_dinero(50f)
         retirar_dinero(200f)
+        retirar_dinero(200f)
+
+        //Marca error porque especificamos que sea de tipo String
+        //var recibos: Array<String> = arrayOf(3.toString(), 4.toString(), "gas")
+        var recibos: Array<String> = arrayOf("luz", "agua", "gas")
+        recorrer_array(recibos)
+
+        var matriz = arrayOf(
+            intArrayOf(1,2,3),
+            intArrayOf(4,5,6),
+            intArrayOf(7,8,9)
+        )
+
         /*
         var a:Int = 5 + 5 //10
         val b:Int = 10 - 2
@@ -113,23 +126,35 @@ class MainActivity : AppCompatActivity() {
 
     fun ingresar_dinero(cantidad: Float){
         saldo += cantidad
-        println("Se ha ingresado $sueldo $moneda")
+        println("Se ha ingresado $cantidad $moneda")
         mostrar_saldo()
     }
 
     fun retirar_dinero(cantidad: Float){
         if (verificarCantidad(cantidad)){
             saldo -= cantidad
-            println("Se ha hecho una retirada de $sueldo $moneda")
+            println("Se ha hecho una retirada de $cantidad $moneda")
             mostrar_saldo()
         }
         else println("Cantidad superior al saldo. Porfavor no sea pobre")
 
     }
 
+    @Suppress("RedundantIf")
     fun verificarCantidad(cantidad: Float):Boolean{
         if (cantidad > saldo) return false
         else return true
+    }
+
+    fun recorrer_array(arrayL: Array<String>){
+        for (i in arrayL)
+            println(i)
+
+        for (i in arrayL.indices)
+            println(arrayL.get(i))
+
+        for (i in 0 ..arrayL.size -1)
+            println("${i+1}: ${arrayL.get(i)}")
     }
 
 }
