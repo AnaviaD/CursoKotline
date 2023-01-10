@@ -72,9 +72,29 @@ class MainActivity : AppCompatActivity() {
 
         var matriz = arrayOf(
             intArrayOf(1,2,3),
-            intArrayOf(4,5,6),
-            intArrayOf(7,8,9)
+            intArrayOf(4,5,6,2,3),
+            intArrayOf(7,8,9,4,5,6,7)
         )
+
+        for (i in (0 until matriz.size)){
+            println()
+            for (j in (0 until matriz[i].size))
+                println("Posicion [$i][$j]: ${matriz[i][j]}")
+        }
+
+        //Conjunto de datos
+        //Conjunto de datos
+        var clientesVIP: Set<Int> = setOf(1234, 5678, 4040)
+        val setMezclado = setOf(2, 4.454, "casa", "c")
+
+        println("clientes VIP: \n")
+        println(clientesVIP)
+        println("Numero de clientes VIP: ${clientesVIP.size}")
+
+        if (clientesVIP.contains(1234)) println("1234 es VIP")
+        if (clientesVIP.contains(1235)) println("1235 es VIP")
+        //Conjunto de datos
+        //Conjunto de datos
 
         /*
         var a:Int = 5 + 5 //10
