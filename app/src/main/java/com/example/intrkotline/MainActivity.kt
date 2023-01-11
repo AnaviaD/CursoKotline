@@ -112,7 +112,9 @@ class MainActivity : AppCompatActivity() {
         var divisas: List<String> = listOf("USD", "EUR", "YEN")
         println(divisas)
 
-        var bolsa: MutableList<String>
+        var bolsa: MutableList<String> = mutableListOf("Cocacola", "Adidas", "Amazon", "Pfizer")
+        println()(bolsa)
+
 
 
         /*
