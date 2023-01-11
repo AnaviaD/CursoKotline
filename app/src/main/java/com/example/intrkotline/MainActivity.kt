@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity() {
         while (saldo >= cantidad_a_invertir){
             //Cuando se pone el doble signo !! quiere decir que no va a recibir nulo
             //empresa = bolsa.elementAtOrNull(index)!!
-            empresa = bolsa.elementAtOrNull(index)
+            empresa = bolsa.elementAtOrNull(index001)
             if(empresa != null){
                 saldo -= cantidad_a_invertir
                 println("Se ha invertido $cantidad_a_invertir $moneda en $empresa")
