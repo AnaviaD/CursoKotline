@@ -113,7 +113,14 @@ class MainActivity : AppCompatActivity() {
         println(divisas)
 
         var bolsa: MutableList<String> = mutableListOf("Cocacola", "Adidas", "Amazon", "Pfizer")
-        println()(bolsa)
+        println(bolsa)
+
+        var mapa: Map<Int, String> = mapOf(
+            1 to "España",
+            2 to "Mexico",
+            3 to "Colombia"
+        )
+        println(mapa)
 
 
 
