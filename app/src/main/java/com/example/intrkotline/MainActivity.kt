@@ -84,6 +84,8 @@ class MainActivity : AppCompatActivity() {
 
         //Conjunto de datos
         //Conjunto de datos
+
+        /*
         var clientesVIP: Set<Int> = setOf(1234, 5678, 4040)
         val setMezclado = setOf(2, 4.454, "casa", "c")
 
@@ -95,6 +97,23 @@ class MainActivity : AppCompatActivity() {
         if (clientesVIP.contains(1235)) println("1235 es VIP")
         //Conjunto de datos
         //Conjunto de datos
+
+        var clientes: MutableSet<Int> = mutableSetOf(1234,5678,4141,8970)
+        println("Clientes:")
+        println(clientes)
+        clientes.add(3026)
+        println(clientes)
+        clientes.remove(5678)
+        println(clientes)
+        clientes.clear()
+        println(clientes)
+        */
+
+        var divisas: List<String> = listOf("USD", "EUR", "YEN")
+        println(divisas)
+
+        var bolsa: MutableList<String>
+
 
         /*
         var a:Int = 5 + 5 //10
