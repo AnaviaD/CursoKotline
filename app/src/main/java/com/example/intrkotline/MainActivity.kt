@@ -126,9 +126,23 @@ class MainActivity : AppCompatActivity() {
         inversiones.put("Coca-Cola", 50f)
         println(inversiones)
 
-        
+        var empresa: String = "jotajotavm"
 
+        mostrar_saldo()
+        var cantidad_a_invertir = 90f
+        var index001 = 0
 
+        while (saldo >= cantidad_a_invertir){
+            empresa = bolsa.elementAtOrNull(index)
+            if(empresa != null){
+                saldo -= cantidad_a_invertir
+                println("Se ha invertido $cantidad_a_invertir $moneda en $empresa")
+
+                inversiones.put(empresa, cantidad_a_invertir)
+            }
+            else break
+            index001++
+        }
 
         /*
         var a:Int = 5 + 5 //10
