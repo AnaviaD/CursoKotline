@@ -23,5 +23,14 @@ class MainActivity : AppCompatActivity() {
         println(anonimo.nombre)
         println(anonimo.passport)
 
+        var bicho: Pokemon = Pokemon()
+        println(bicho.getName())
+        bicho.setName("Noivrn")
+        println(bicho.getName())
+        bicho.setAttakPower(450f)
+        println(bicho.getAttackPower())
+        bicho.setLife(300f)
+        println(bicho.getLife())
+
     }
 }

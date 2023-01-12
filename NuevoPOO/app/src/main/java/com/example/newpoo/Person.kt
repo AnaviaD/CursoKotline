@@ -17,3 +17,5 @@ class Person(var nombre:String = "Anonimo", var passport: String? = null) {
         alive = true
     }
 }
+
+class Athlete(name)
