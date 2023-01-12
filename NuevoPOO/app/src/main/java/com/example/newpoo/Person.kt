@@ -1,7 +1,8 @@
 package com.example.newpoo
 
 //El ? significa que puede o no traer algun valor
-class Person(var nombre:String = "Anonimo", var passport: String? = null) {
+//Se agrega el open para poder heredar
+open class Person(var nombre:String = "Anonimo", var passport: String? = null) {
     var alive: Boolean = true
 
     fun Person(){
@@ -18,4 +19,4 @@ class Person(var nombre:String = "Anonimo", var passport: String? = null) {
     }
 }
 
-class Athlete(name)
+class Athlete(nombre: String, passport: String?,var sport: String): Person(nombre, passport)

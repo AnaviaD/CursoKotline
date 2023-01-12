@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         println(anonimo.nombre)
         println(anonimo.passport)
 
+        var pele: Athlete = Athlete("pele", "C345DT", "Futbol")
+        println(pele.alive)
+        println(pele.nombre)
+        println(pele.passport)
+        println(pele.sport)
+
         var bicho: Pokemon = Pokemon()
         println(bicho.getName())
         bicho.setName("Noivrn")
