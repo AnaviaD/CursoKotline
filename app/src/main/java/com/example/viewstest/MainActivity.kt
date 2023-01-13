@@ -32,5 +32,10 @@ class MainActivity : AppCompatActivity() {
             if (etEjemplo.text.length == 0) etEjemplo.setError("Campo vacio")
         }
 
+        etEjemplo.setSelection(3)
+        var inicio = etEjemplo.selectionStart
+        var fin = etEjemplo.selectionEnd
+        etEjemplo.selectAll()
+
     }
 }
