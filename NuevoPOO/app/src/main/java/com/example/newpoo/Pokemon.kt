@@ -32,6 +32,7 @@ open class Pokemon( protected var name:String = "Pok",
     }
 
     //fun attack(){ Toast.makeText(maincontext, "Al toque prro", Toast.LENGTH_LONG).show()}
+    open fun attack(){ println("Ataque")}
 }
 
 class WaterPokemon(n: String = "WPoke", aP: Float = 30f, l: Float = 100f)
@@ -52,4 +53,6 @@ class WaterPokemon(n: String = "WPoke", aP: Float = 30f, l: Float = 100f)
 
     fun breathe() { this.submergedTime = 0}
     fun inmerse() { this.submergedTime++ }
+
+    override fun attack(){ println("Ataque con agua")}
 }
