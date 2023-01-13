@@ -14,14 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var tvEjemplo = findViewById<TextView>(R.id.tvEjemplo)
-        tvEjemplo.text = "Cambiado desde Codigo"
-        tvEjemplo.setTextColor(Color.RED)
-        tvEjemplo.setTypeface(Typeface.MONOSPACE, Typeface.BOLD)
 
-        tvEjemplo.setOnClickListener{
-            Toast.makeText(this, "TextView Clicked", Toast.LENGTH_SHORT).show()
-            tvEjemplo.setTextColor(Color.GREEN)
-            tvEjemplo.text = "No traigo mandados"
+        tvEjemplo.apply {
+            text = "Cambiado desde Codigo"
+            setTextColor(Color.RED)
+            setTypeface(Typeface.MONOSPACE, Typeface.BOLD)
+            setOnClickListener{
+                setTextColor(Color.GREEN)
+                text = "No traigo mandados"
+            }
         }
+
     }
 }
