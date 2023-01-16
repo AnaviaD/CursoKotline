@@ -27,15 +27,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
         var etEjemplo = findViewById<EditText>(R.id.etEjemplo)
         etEjemplo.addTextChangedListener {
+            var inicio:Int
+            var fin:Int
+            inicio = etEjemplo.selectionStart
+            fin = etEjemplo.selectionEnd
+            println("La variable inicio: ${inicio} ")
+            println("La variable fin: ${fin}")
+            println("Valor: ${etEjemplo.text.toString()}")
             if (etEjemplo.text.length == 0) etEjemplo.setError("Campo vacio")
         }
-
-        etEjemplo.setSelection(3)
-        var inicio = etEjemplo.selectionStart
-        var fin = etEjemplo.selectionEnd
-        etEjemplo.selectAll()
-
     }
 }
