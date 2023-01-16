@@ -4,6 +4,8 @@ import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -39,5 +41,14 @@ class MainActivity : AppCompatActivity() {
             println("Valor: ${etEjemplo.text.toString()}")
             if (etEjemplo.text.length == 0) etEjemplo.setError("Campo vacio")
         }
+
+
+        var autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
+        var countries: Array<String> = resources.getStringArray(R.array.countries_array)
+        var adapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, countries)
+
+        autoCompleteTextView.setAdapter(adapter)
+
     }
 }

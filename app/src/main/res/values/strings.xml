@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ViewsTest</string>
+
+    <string-array name="countries_array">
+        <item>Afganistan</item>
+        <item>Albania</item>
+        <item>Alegeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+    </string-array>
 </resources>
