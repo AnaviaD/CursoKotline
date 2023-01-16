@@ -45,10 +45,8 @@ class MainActivity : AppCompatActivity() {
 
         var autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         var countries: Array<String> = resources.getStringArray(R.array.countries_array)
-        var adapter: ArrayAdapter<String> =
-            ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, countries)
+        var adapter: ArrayAdapter<String> = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, countries)
 
         autoCompleteTextView.setAdapter(adapter)
-
     }
 }
