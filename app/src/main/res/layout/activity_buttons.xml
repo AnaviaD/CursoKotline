@@ -29,6 +29,7 @@
             app:srcCompat="@drawable/ic_email" />
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cdCondiciones"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -53,6 +54,7 @@
             android:layout_height="wrap_content"
             android:text="campo3"
             style="@style/chEntry"/>
+
         </com.google.android.material.chip.ChipGroup>
 
     </LinearLayout>
