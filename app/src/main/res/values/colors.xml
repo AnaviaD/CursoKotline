@@ -13,4 +13,7 @@
     <color name="orange">#f7ab43</color>
     <color name="purple">#8e0584</color>
     <color name="gold">#dddf2e</color>
+
+    <color name="blue_light">#cce3fb</color>
+    <color name="blue_dark">#0360db</color>
 </resources>
