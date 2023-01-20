@@ -13,6 +13,13 @@
         android:theme="@style/Theme.ViewsTest"
         tools:targetApi="31">
         <activity
+            android:name=".widgets"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".buttons"
             android:exported="true">
             <intent-filter>
