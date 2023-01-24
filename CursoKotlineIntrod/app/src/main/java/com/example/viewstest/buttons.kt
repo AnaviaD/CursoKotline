@@ -21,7 +21,7 @@ class buttons : AppCompatActivity() {
 
         var cgCondiciones = findViewById<ChipGroup>(R.id.cdCondiciones)
         var chip: Chip
-        for (i in 0..cgCondiciones.childCount){
+        for (i in 0 until cgCondiciones.childCount){
             chip = cgCondiciones.getChildAt(i) as Chip
             chip.textAlignment = View.TEXT_ALIGNMENT_CENTER
 
@@ -33,5 +33,8 @@ class buttons : AppCompatActivity() {
                 Toast.makeText(this, "${aux.text} pulsado", Toast.LENGTH_SHORT).show()
             }
         }
+
+        //val chipNew = Chip(this)
+
     }
 }
