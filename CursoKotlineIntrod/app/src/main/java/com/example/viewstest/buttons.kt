@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
@@ -34,7 +35,12 @@ class buttons : AppCompatActivity() {
             }
         }
 
-        //val chipNew = Chip(this)
+        val chipNew = Chip(this)
+        chipNew.text = "opcion"
+        chipNew.chipIcon = ContextCompat.getDrawable(this, R.drawable)
+
+
+
 
     }
 }
