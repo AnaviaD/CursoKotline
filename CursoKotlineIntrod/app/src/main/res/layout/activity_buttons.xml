@@ -70,5 +70,28 @@
                 style="@style/chEntry"/>
         </com.google.android.material.chip.ChipGroup>
 
+        <RadioGroup
+            android:id="@+id/rgVacaciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbPlaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playa"
+                android:buttonTint="@color/orange"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"></RadioButton>
+            <RadioButton
+                android:id="@+id/rbMontana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Montana"
+                android:buttonTint="@color/black"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"></RadioButton>
+
+        </RadioGroup>
     </LinearLayout>
 </ScrollView>

@@ -11,4 +11,5 @@
         <item>Anguilla</item>
         <item>Antarctica</item>
     </string-array>
+    <string name="bar_title">Titulo de la app :'v</string>
 </resources>
