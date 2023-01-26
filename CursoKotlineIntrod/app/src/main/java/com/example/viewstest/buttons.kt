@@ -35,10 +35,10 @@ class buttons : AppCompatActivity() {
             }
         }
 
-        val chipNew = Chip(this)
+        val chipNew = Chip(this, null, R.style.chEntry)
         chipNew.text = "opcion"
         chipNew.chipIcon = ContextCompat.getDrawable(this, R.drawable.ic_truck01)
-        chipNew.isChipIconVisible = false
+        chipNew.isChipIconVisible = true
         chipNew.isCloseIconVisible = true
 
         chipNew.isClickable = true
