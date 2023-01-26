@@ -60,12 +60,12 @@ class buttons : AppCompatActivity() {
 
     }
 
-    fun onRadioButtonClicked(view: View){
+    /*fun onRadioButtonClicked(view: View){
         if(view is RadioButton){
             var checked = view.isChecked
             when(view.id){
 
             }
         }
-    }
+    }*/
 }
