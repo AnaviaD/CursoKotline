@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1361216b-ad8a-459f-a5c0-0155890e15b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
