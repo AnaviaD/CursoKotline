@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1361216b-ad8a-459f-a5c0-0155890e15b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoKotlineIntrod/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/navigationdrawer/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/navigationdrawer/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
