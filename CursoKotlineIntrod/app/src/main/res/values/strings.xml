@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ViewsTest</string>
+    <string name="user">Usuario Random</string>
+    <string name="nav_hi">Hola Usuario Random</string>
 
     <string-array name="countries_array">
         <item>Afganistan</item>
