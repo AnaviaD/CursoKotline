@@ -11,5 +11,13 @@
         <item>Anguilla</item>
         <item>Antarctica</item>
     </string-array>
+
     <string name="bar_title">Menu serio</string>
+    <string name="menu_running">Runnig</string>
+    <string name="menu_record">Historial</string>
+    <string name="menu_becamepremium">Hazte premium</string>
+    <string name="menu_clearpreferences">Reestablecer Ajustes</string>
+    <string name="menu_singout">Cerrar sesion</string>
+    <string name="menu_offercourse">Quieres aprender a desarrollar apps? Entra aqui</string>
+
 </resources>

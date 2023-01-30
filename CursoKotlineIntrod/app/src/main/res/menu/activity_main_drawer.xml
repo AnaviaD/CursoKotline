@@ -3,8 +3,8 @@
     <group>
         <item
             android:id="@+id/nav_item_main"
-            android:title="Running">
-
+            android:title="@string/menu_running"
+            android:icon="@drawable/ic_rocket">
         </item>
     </group>
 </menu>
