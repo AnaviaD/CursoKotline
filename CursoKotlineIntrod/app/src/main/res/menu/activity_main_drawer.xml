@@ -6,5 +6,35 @@
             android:title="@string/menu_running"
             android:icon="@drawable/ic_rocket">
         </item>
+        <item
+            android:id="@+id/nav_item_record"
+            android:title="@string/menu_record"
+            android:icon="@android:drawable/ic_menu_gallery">
+        </item>
+        <item
+            android:id="@+id/nav_item_premium"
+            android:title="@string/menu_becamepremium"
+            android:icon="@android:drawable/star_on">
+        </item>
     </group>
+    <item android:title="Cuenta">
+        <menu>
+            <item android:id="@+id/nav_item_clearpreferences"
+                android:title="@string/menu_clearpreferences"
+                android:icon="@android:drawable/ic_popup_sync">
+            </item>
+            <item android:id="@+id/nav_item_singout"
+                android:title="@string/menu_singout"
+                android:icon="@android:drawable/arrow_up_float">
+            </item>
+        </menu>
+    </item>
+    <item android:title="Anuncio">
+        <menu>
+            <item android:id="@+id/nav_item_offer"
+                android:icon="@android:drawable/ic_menu_compass"
+                android:title="@string/menu_offercourse">
+            </item>
+        </menu>
+    </item>
 </menu>
