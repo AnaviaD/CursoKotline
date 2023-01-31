@@ -2,6 +2,7 @@
     <string name="app_name">ViewsTest</string>
     <string name="user">Usuario Random</string>
     <string name="nav_hi">Hola Usuario Random</string>
+    <string name="level">Nivel</string>
 
     <string-array name="countries_array">
         <item>Afganistan</item>
@@ -21,5 +22,9 @@
     <string name="menu_clearpreferences">Reestablecer Ajustes</string>
     <string name="menu_singout">Cerrar sesion</string>
     <string name="menu_offercourse">Quieres aprender a desarrollar apps? Entra aqui</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
 
 </resources>
