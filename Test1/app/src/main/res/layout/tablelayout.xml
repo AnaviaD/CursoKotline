@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
+    <TableRow
+        android:background="#3F51B5">
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Articlo"
+            android:textColor="@color/white"></TextView>
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="Precio"
+            android:textColor="@color/white"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="2 Kg de Naranjas"></TextView>
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="1.50$"
+            android:textAlignment="textEnd"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="3 Tortillas"></TextView>
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="3.50$"
+            android:textAlignment="textEnd"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="5 Sushis"></TextView>
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="13$"
+            android:textAlignment="textEnd"></TextView>
+    </TableRow>
+    <View
+        android:layout_height="2dp"
+        android:background="#ACACCC"></View>
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text="Subtotal"
+            android:textColor="#3F51B5"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:textAlignment="textEnd"
+            android:padding="5dp"
+            android:text="26.04$"></TextView>
+    </TableRow>
 </TableLayout>
