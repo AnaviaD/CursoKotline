@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setupTabLayout() {
 
+        /*
         val selectedPosition = binding.tabLayout.selectedTabPosition
         binding.textView.text =
             getString(R.string.selected_tab, binding.tabLayout.getTabAt(selectedPosition)?.text)
@@ -36,5 +37,7 @@ class MainActivity : AppCompatActivity() {
                 // Write code to handle tab reselect
             }
         });
+
+         */
     }
 }
