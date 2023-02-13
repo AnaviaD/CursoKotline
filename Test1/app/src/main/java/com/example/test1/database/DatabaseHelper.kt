@@ -1,5 +1,6 @@
 package com.example.test1.database
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -36,9 +37,9 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DB_Name, null,
             if (cursor.moveToFirst()){
                 do {
                     val tasks = TaskListModel()
-                    tasks.id = Integer.parseInt(cursor.getString(cursor.getColumnIndex(ID)))
-                    tasks.name = cursor.getString(cursor.getColumnIndex(TABLE_NAME))
-                    tasks.details = cursor.getString(cursor.getColumnIndex(TASK_DETAILS))
+                    tasks.id = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(ID)))
+                    tasks.name = cursor.getString(cursor.getColumnIndexOrThrow(TABLE_NAME))
+                    tasks.details = cursor.getString(cursor.getColumnIndexOrThrow(TASK_DETAILS))
                     tasklist.add(tasks)
                 }while (cursor.moveToNext())
             }
