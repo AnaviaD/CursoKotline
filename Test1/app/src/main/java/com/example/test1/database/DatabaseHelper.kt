@@ -81,4 +81,13 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DB_Name, null,
         return Integer.parseInt("$_success") != -1
     }
 
+    fun updateTask(tasks: TaskListModel): Boolean{
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put(TASK_NAME, tasks.name)
+        values.put(TASK_DETAILS, tasks.details)
+        val _success = db.update(TABLE_NAME, values, ID + "=?", arrayOf(tasks.id.toString())).toLong()
+        db.close()
+        return Integer.parseInt("$_success") != -1
+    }
 }
