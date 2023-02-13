@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import com.example.test1.database.DatabaseHelper
 import com.example.test1.model.TaskListModel
 
@@ -35,15 +36,23 @@ class add_task : AppCompatActivity() {
             isEditMode = true
             btn_save.text = "Update Data"
             btn_del.visibility = View.VISIBLE
+            val tasks: TaskListModel = dbHandler!!.getTask(intent.getIntExtra("Id", 0))
+            et_name.setText(tasks.name)
+            et_details.setText(tasks.details)
         }else{
             isEditMode = false
             btn_save.text = "Save Data"
             btn_del.visibility = View.GONE
         }
         btn_save.setOnClickListener {
-        var success: false
+        var success: Boolean = false
         var tasks: TaskListModel = TaskListModel()
             if (isEditMode){
+                tasks.id = intent.getIntExtra("Id", 0)
+                tasks.name = et_name.text.toString()
+                tasks.details = et_details.text.toString()
+
+                success = dbHandler?.updateTask(tasks) as Boolean
 
             }else{
                 tasks.name = et_name.text.toString()
@@ -58,6 +67,20 @@ class add_task : AppCompatActivity() {
             }else{
                 Toast.makeText(applicationContext, "Something went Wrong!", Toast.LENGTH_LONG).show()
             }
+        }
+
+        btn_del.setOnClickListener{
+            val dialog = AlertDialog.Builder(this).setTitle("Info").setMessage("click yes")
+                .setPositiveButton("Yes") { dialog, i ->
+                    val success = dbHandler?.deleteTask(intent.getIntExtra("Id", 0)) as Boolean
+                    if (success)
+                        finish()
+                    dialog.dismiss()
+                }
+                .setNegativeButton("No") { dialog, i ->
+                    dialog.dismiss()
+                }
+            dialog.show()
         }
     }
 }
