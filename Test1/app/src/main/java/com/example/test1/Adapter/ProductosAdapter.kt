@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.test1.R
 import com.example.test1.model.Producto
+import kotlinx.android.synthetic.main.item_producto.view.*
 
 class ProductosAdapter(private val mContext: Context, private val listaProductos: List<Producto>): ArrayAdapter<Producto>(mContext, 0, listaProductos) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -14,6 +15,9 @@ class ProductosAdapter(private val mContext: Context, private val listaProductos
 
         val producto = listaProductos[position]
 
+        layout.Tv_Nombre.text = producto.nombre
+        layout.Tv_Precio.text = "$${producto.precio}"
+        layout.imageView.setImageResource(producto.inmagen)
 
         return layout
     }
