@@ -1,5 +1,6 @@
 package com.example.test1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.test1.Adapter.ProductosAdapter
@@ -20,6 +21,11 @@ class MainList : AppCompatActivity() {
 
         Lv_lista.adapter = adapter
 
+        Lv_lista.setOnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this, ProductoDetActivity::class.java)
+            intent.putExtra("producto", listaProductos[position])
+            startActivity(intent)
+        }
 
     }
 }

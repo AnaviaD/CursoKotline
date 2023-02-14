@@ -1,4 +1,7 @@
 package com.example.test1.model
 
-class Producto(val nombre:String, val precio:Double, val descripcion:String, val inmagen:Int) {
+import java.io.Serializable
+
+class Producto(val nombre:String, val precio:Double, val descripcion:String, val inmagen:Int):
+    Serializable {
 }
