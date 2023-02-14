@@ -19,5 +19,7 @@ class MainList : AppCompatActivity() {
         val adapter = ProductosAdapter(this, listaProductos)
 
         Lv_lista.adapter = adapter
+
+
     }
 }
