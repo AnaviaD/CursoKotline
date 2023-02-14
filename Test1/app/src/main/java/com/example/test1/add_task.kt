@@ -1,5 +1,6 @@
 package com.example.test1
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,7 @@ class add_task : AppCompatActivity() {
     var dbHandler: DatabaseHelper? = null
     var isEditMode: Boolean = false
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_task)

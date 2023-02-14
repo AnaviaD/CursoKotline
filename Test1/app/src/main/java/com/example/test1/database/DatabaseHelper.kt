@@ -39,7 +39,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DB_Name, null,
                 do {
                     val tasks = TaskListModel()
                     tasks.id = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(ID)))
-                    tasks.name = cursor.getString(cursor.getColumnIndexOrThrow(TABLE_NAME))
+                    tasks.name = cursor.getString(cursor.getColumnIndexOrThrow(TASK_NAME))
                     tasks.details = cursor.getString(cursor.getColumnIndexOrThrow(TASK_DETAILS))
                     tasklist.add(tasks)
                 }while (cursor.moveToNext())

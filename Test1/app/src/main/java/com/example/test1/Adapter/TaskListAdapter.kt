@@ -38,6 +38,7 @@ class TaskListAdapter(tasklist: List<TaskListModel>, internal var context: Conte
             val i = Intent(context, add_task::class.java)
             i.putExtra("Mode", "E")
             i.putExtra("Id", task.id)
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i)
         }
     }
