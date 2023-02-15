@@ -14,9 +14,9 @@ class ProductoDetActivity : AppCompatActivity() {
         val objIntent: Intent = intent
         val producto = objIntent.getSerializableExtra("producto") as Producto
 
-        nombre_Producto.text = producto.nombre
-        precio_Producto.text = "$$(producto.precio)"
-        description_Producto.text = producto.descripcion
+        nombre_Producto.text = producto?.nombre
+        precio_Producto.text = "$ " + producto?.precio.toString()
+        description_Producto.text = producto?.descripcion
         image_Producto.setImageResource(producto.inmagen)
 
     }
