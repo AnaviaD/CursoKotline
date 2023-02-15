@@ -30,4 +30,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar" />
+
+    <Button
+        android:id="@+id/bt_Consulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consultar" />
+
+    <TextView
+        android:id="@+id/tv_Consulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aqui aparecen los datos a consultar" />
 </LinearLayout>
