@@ -1,5 +1,6 @@
 package com.example.test1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.test1.model.Producto
@@ -10,7 +11,8 @@ class ProductoDetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_producto_det)
 
-        val producto = intent.getSerializableExtra("producto") as Producto
+        val objIntent: Intent = intent
+        val producto = objIntent.getSerializableExtra("producto") as Producto
 
         nombre_Producto.text = producto.nombre
         precio_Producto.text = "$$(producto.precio)"

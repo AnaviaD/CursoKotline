@@ -26,6 +26,5 @@ class MainList : AppCompatActivity() {
             intent.putExtra("producto", listaProductos[position])
             startActivity(intent)
         }
-
     }
 }
