@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.fragmentst'
-    compileSdk 33
+    namespace 'com.example.testfragments'
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.fragmentst"
+        applicationId "com.example.testfragments"
         minSdk 26
         targetSdk 32
         versionCode 1
