@@ -3,5 +3,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00A500"
-    tools:context=".FragmentTres" />
+    android:background="#EA0B0B"
+    tools:context=".FragmentsUno" />
