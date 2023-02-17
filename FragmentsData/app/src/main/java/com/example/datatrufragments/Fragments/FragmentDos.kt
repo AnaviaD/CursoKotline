@@ -55,7 +55,7 @@ class FragmentDos : Fragment() {
 
         boton?.setOnClickListener {
             val et: EditText? = view?.findViewById(R.id.editText2)
-            activityConectador.devolverDato(et?.text.toString())
+            activityConectador?.devolverDato(et?.text.toString())
         }
     }
 }

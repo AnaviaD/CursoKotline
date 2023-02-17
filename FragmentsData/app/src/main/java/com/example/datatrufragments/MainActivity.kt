@@ -7,7 +7,8 @@ import com.example.datatrufragments.Fragments.FragmentTres
 import com.example.datatrufragments.Fragments.FragmentUno
 import com.example.datatrufragments.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),
+    FragmentDos.ComunicadorFragments {
 
     lateinit var binding: ActivityMainBinding
     var numFragmento = 0
@@ -52,5 +53,9 @@ class MainActivity : AppCompatActivity() {
             transaccion.addToBackStack(null)
             transaccion.commit()
         }
+    }
+
+    override fun devolverDato(dato: String) {
+        binding.editTPrincipal.setText(dato)
     }
 }
