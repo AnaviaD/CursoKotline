@@ -3,6 +3,7 @@ package com.example.webservisretrofit01
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,10 +12,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+lateinit var strTxt1: TextView
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        strTxt1 = findViewById(R.id.txtId)
 
         getMyData();
     }
@@ -40,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     myStringBuilder.append(myData.id)
                     myStringBuilder.append("\n")
                 }
-                txtId.text = myStringBuilder
+                strTxt1.text = myStringBuilder
             }
 
             override fun onFailure(call: Call<List<MyDataItem>?>, t: Throwable) {
