@@ -41,7 +41,7 @@ class MainViewModel: ViewModel() {
             ) {
                 val body = response.body()
                 apiResponse.value = body?.flatten()
-                error.value = null
+                //error.value = body?.flatten().toString()
                 loading.value = false
             }
 
