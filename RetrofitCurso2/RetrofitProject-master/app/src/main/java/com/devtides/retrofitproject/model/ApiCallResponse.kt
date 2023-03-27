@@ -7,6 +7,7 @@ data class ApiCallResponse (
 ){
     fun flatten():List<Item>{
         val flatpack = arrayListOf<Item>()
+
         TractoHead?.let {
             if (!TractoHead.values.isEmpty()){
                 flatpack.add(Item("TractoHead", "", TYPE_CATEGORY))
@@ -27,6 +28,7 @@ data class ApiCallResponse (
                 addMapItems(InterTracto, flatpack)
             }
         }
+
         return flatpack
     }
 
