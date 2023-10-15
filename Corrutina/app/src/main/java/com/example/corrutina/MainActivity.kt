@@ -3,9 +3,13 @@ package com.example.corrutina
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
     var primerB         : Button? = null
     var contador        : Int? = 1
+
+    val TAG = "MainActivity"
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +33,13 @@ class MainActivity : AppCompatActivity() {
         primerText?.setText("Hello World " +
                 "\n BARCO BASURERO" +
                 "\n jajajaja")
+
+        GlobalScope.launch {
+            delay(3000L)
+            Log.d(TAG, "Corrutina Hello from thread ${Thread.currentThread().name}")
+        }
+        Log.d(TAG, "Hello from thread ${Thread.currentThread().name}")
+
 
 
     }
