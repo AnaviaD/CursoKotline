@@ -10,7 +10,6 @@
         android:id="@+id/primerTextLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
         android:text="Hello World!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +19,7 @@
         android:id="@+id/buttonMas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="20dp"
         android:onClick="funcionMas"
         android:text="Mas"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +44,7 @@
         android:id="@+id/buttonMenos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="20dp"
         android:onClick="funcionMenos"
         android:text="Menos"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +58,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Clase1"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
+
+    <Button
+        android:id="@+id/Clase2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clase2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Clase1"
+        app:layout_constraintTop_toTopOf="@+id/Clase1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
