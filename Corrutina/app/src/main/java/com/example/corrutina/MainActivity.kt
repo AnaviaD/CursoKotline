@@ -11,6 +11,8 @@ import android.widget.TextView
 import com.example.corrutina.Clases.Clase1
 import com.example.corrutina.Clases.Clase2
 import com.example.corrutina.Clases.Clase3
+import com.example.corrutina.Clases.Clase4
+import com.example.corrutina.Clases.Clase5
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     var Clasebtn1           : Button? = null
     var Clasebtn2           : Button? = null
     var Clasebtn3           : Button? = null
+    var Clasebtn4           : Button? = null
+    var Clasebtn5           : Button? = null
 
     var contador        : Int? = 1
 
@@ -41,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         Clasebtn1           = findViewById(R.id.Clase1btn)
         Clasebtn2           = findViewById(R.id.Clase2btn)
         Clasebtn3           = findViewById(R.id.Clase3btn)
+        Clasebtn4           = findViewById(R.id.Clase4btn)
+        Clasebtn5           = findViewById(R.id.Clase5btn)
 
         primerText?.setText("Hello World " +
                 "\n BARCO BASURERO" +
@@ -70,6 +76,16 @@ class MainActivity : AppCompatActivity() {
 
         Clasebtn3?.setOnClickListener{
             val intent = Intent(this, Clase3::class.java)
+            startActivity(intent)
+        }
+
+        Clasebtn4?.setOnClickListener{
+            val intent = Intent(this, Clase4::class.java)
+            startActivity(intent)
+        }
+
+        Clasebtn5?.setOnClickListener{
+            val intent = Intent(this, Clase5::class.java)
             startActivity(intent)
         }
 

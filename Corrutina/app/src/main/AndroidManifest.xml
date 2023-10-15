@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Corrutina"
         tools:targetApi="31">
         <activity
+            android:name=".Clases.Clase5"
+            android:exported="false" />
+        <activity
+            android:name=".Clases.Clase4"
+            android:exported="false" />
+        <activity
             android:name=".Clases.Clase3"
             android:exported="false" />
         <activity
