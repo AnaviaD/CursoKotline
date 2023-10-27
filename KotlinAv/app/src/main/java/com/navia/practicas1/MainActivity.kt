@@ -5,7 +5,7 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    //Funciones de extension
+    //1Funciones de extension
     /*
     private fun String.noSpace():String{
         return this.replace(" ", "")
@@ -19,11 +19,22 @@ class MainActivity : AppCompatActivity() {
     */
 
 
+    //Funsiones de orden Superior
+    private fun calculadora(n1: Int, n2: Int, fn: (Int, Int) -> Int): Int{
+        return fn(n1, n2)
+    }
+
+    private fun suma(x: Int, y: Int):Int { return x+y}
+    private fun resta(x: Int, y: Int):Int { return x-y}
+    private fun miltiplica(x: Int, y: Int):Int { return x*y}
+    private fun divide(x: Int, y: Int):Int { return x/y}
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Funcion de extension
+        //1Funcion de extension
         /*
         var usuario = "        Soy     yo    "
         println("${usuario} (${usuario.length}) - ${usuario.noSpace()} (${usuario.noSpace().length})")
@@ -38,6 +49,13 @@ class MainActivity : AppCompatActivity() {
         println("array2: "); array2.show()
         var array3: IntArray = intArrayOf(1,2,3,4,5)
         */
+
+        //Funciones de Orden Superior
+        println("Suma        80 + 20 = ${calculadora(80, 20, ::suma)}")
+        println("Resta       50 - 10 = ${calculadora(50, 10, ::suma)}")
+        println("Producto    7 * 7  = ${calculadora(7, 7, ::suma)}")
+        println("Division    12 / 3 = ${calculadora(12, 3
+            , ::suma)}")
 
 
     }
