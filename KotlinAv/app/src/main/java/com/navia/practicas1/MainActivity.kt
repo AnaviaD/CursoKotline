@@ -52,9 +52,9 @@ class MainActivity : AppCompatActivity() {
 
         //Funciones de Orden Superior
         println("Suma        80 + 20 = ${calculadora(80, 20, ::suma)}")
-        println("Resta       50 - 10 = ${calculadora(50, 10, ::suma)}")
-        println("Producto    7 * 7  = ${calculadora(7, 7, ::suma)}")
-        println("Division    12 / 3 = ${calculadora(12, 3, ::suma)}")
+        println("Resta       50 - 10 = ${calculadora(50, 10, ::resta)}")
+        println("Producto    7 * 7  = ${calculadora(7, 7, ::miltiplica)}")
+        println("Division    12 / 3 = ${calculadora(12, 3, ::divide)}")
 
 
     }
