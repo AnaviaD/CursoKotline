@@ -54,8 +54,7 @@ class MainActivity : AppCompatActivity() {
         println("Suma        80 + 20 = ${calculadora(80, 20, ::suma)}")
         println("Resta       50 - 10 = ${calculadora(50, 10, ::suma)}")
         println("Producto    7 * 7  = ${calculadora(7, 7, ::suma)}")
-        println("Division    12 / 3 = ${calculadora(12, 3
-            , ::suma)}")
+        println("Division    12 / 3 = ${calculadora(12, 3, ::suma)}")
 
 
     }
