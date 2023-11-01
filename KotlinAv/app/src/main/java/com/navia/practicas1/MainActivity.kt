@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
     //Funsiones de orden Superior
+    /*
     private fun calculadora(n1: Int, n2: Int, fn: (Int, Int) -> Int): Int{
         return fn(n1, n2)
     }
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun resta(x: Int, y: Int):Int { return x-y}
     private fun miltiplica(x: Int, y: Int):Int { return x*y}
     private fun divide(x: Int, y: Int):Int { return x/y}
+    */
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         println("${usuario} (${usuario.length}) - ${usuario.noSpace()} (${usuario.noSpace().length})")
         //Funcion de extension
 
-
         var array1: Array<Int> = arrayOf(5,4,3,2,1)
         var array2 = IntArray(3)
         array2[0] = 10
@@ -50,12 +51,14 @@ class MainActivity : AppCompatActivity() {
         var array3: IntArray = intArrayOf(1,2,3,4,5)
         */
 
+
         //Funciones de Orden Superior
+        /*
         println("Suma        80 + 20 = ${calculadora(80, 20, ::suma)}")
         println("Resta       50 - 10 = ${calculadora(50, 10, ::resta)}")
         println("Producto    7 * 7  = ${calculadora(7, 7, ::miltiplica)}")
         println("Division    12 / 3 = ${calculadora(12, 3, ::divide)}")
-
+        */
 
     }
 }
