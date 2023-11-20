@@ -24,21 +24,6 @@ class Clase2 : AppCompatActivity() {
 
         RespuestaC2 = findViewById(R.id.txtRespuesta1)
 
-        GlobalScope.launch(Dispatchers.IO) {
-            Log.d(TAG, "Starting Corrutine thread ${Thread.currentThread().name}")
-            val answer = doNetworkCall()
-
-            withContext(Dispatchers.Main){
-                Log.d(TAG, "Seting text thread ${Thread.currentThread().name}")
-                RespuestaC2?.setText(answer)
-                Log.d(TAG, answer)
-            }
-        }
-    }
-
-    suspend fun doNetworkCall():String{
-        delay(3000L)
-        return "This is an answer"
     }
 
 }

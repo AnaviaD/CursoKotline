@@ -15,23 +15,6 @@ class Clase1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clase1)
 
-        GlobalScope.launch {
-            val networkCallAnswer   = doNetworkCall()
-            val networkCallAnswer2  = doNetworkCall2()
-
-            Log.d(TAG, networkCallAnswer)
-            Log.d(TAG, networkCallAnswer2)
-
-        }
     }
 
-    suspend fun doNetworkCall():String{
-        delay(3000L)
-        return "This is an answer"
-    }
-
-    suspend fun doNetworkCall2():String{
-        delay(3000L)
-        return "This is an answer from call 2"
-    }
 }

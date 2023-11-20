@@ -52,16 +52,6 @@ class MainActivity : AppCompatActivity() {
                 "\n BARCO BASURERO" +
                 "\n jajajaja")
 
-        //Comente esto porque creo que interfiere con la clase 3
-        /*
-        GlobalScope.launch {
-            delay(10000L)
-            Log.d(TAG, "Corrutina Hello from thread ${Thread.currentThread().name}")
-        }
-        Log.d(TAG, "Hello from thread ${Thread.currentThread().name}")
-        */
-
-
 
 
         Clasebtn1?.setOnClickListener{
