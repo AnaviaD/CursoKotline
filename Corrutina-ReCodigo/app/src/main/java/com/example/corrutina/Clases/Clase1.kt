@@ -6,6 +6,7 @@ import android.support.v4.os.IResultReceiver.Default
 import android.util.Log
 import com.example.corrutina.R
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
@@ -21,18 +22,38 @@ class Clase1 : AppCompatActivity() {
         setContentView(R.layout.activity_clase1)
 
         runFirst()
+        runSecond()
 
     }
 
-    fun runFirst(){
-        GlobalScope.launch {
+    private fun log(msg: String)
+    {
+        Log.d(TAG, "Thread: ${Thread.currentThread().name} - $msg")
+    }
+
+
+    fun runFirst()
+    {
+        GlobalScope.launch(Dispatchers.Default) {
             val time: kotlin.time.Duration = measureTime {
-                Log.d(TAG, "print this NOW")
                 delay(1000L)
-                Log.d(TAG, "print this after 1 second ")
+                log("Que hilo es este?")
             }
             Log.d(TAG, "duration: ${time.inWholeMilliseconds}")
         }
+    }
+
+    fun runSecond()
+    {
+        GlobalScope.launch(Dispatchers.Default) {
+            delay(2000L)
+            log("tercero")
+        }
+        GlobalScope.launch(Dispatchers.Default) {
+            delay(1000L)
+            log("segundo")
+        }
+        log("Se supone esto va primero")
     }
 
 }
