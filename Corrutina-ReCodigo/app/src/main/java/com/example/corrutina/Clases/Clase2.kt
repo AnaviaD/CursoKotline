@@ -22,8 +22,27 @@ class Clase2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clase2)
 
-        RespuestaC2 = findViewById(R.id.txtRespuesta1)
+        GlobalScope.launch {
+            val networkCallAnswer       =   doNetworkCall()
+            val networkCallAnswer2      =   doNetworkCall2()
 
+            Log.d(TAG, networkCallAnswer)
+            Log.d(TAG, networkCallAnswer2)
+
+            Log.d(TAG, "Thread: ${Thread.currentThread().name}")
+        }
+
+        RespuestaC2 = findViewById(R.id.txtRespuesta1)
+    }
+
+    suspend fun doNetworkCall(): String{
+        delay(3000L)
+        return "Esta es respuesta de doNetworkCall"
+    }
+
+    suspend fun doNetworkCall2(): String{
+        delay(3000L)
+        return "Esta es respuesta de doNetworkCall 2"
     }
 
 }

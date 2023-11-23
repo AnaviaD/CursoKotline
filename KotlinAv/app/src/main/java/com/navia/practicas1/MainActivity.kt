@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
     //Funsiones de orden Superior
-    /*
+
     private fun calculadora(n1: Int, n2: Int, fn: (Int, Int) -> Int): Int{
         return fn(n1, n2)
     }
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     private fun resta(x: Int, y: Int):Int { return x-y}
     private fun miltiplica(x: Int, y: Int):Int { return x*y}
     private fun divide(x: Int, y: Int):Int { return x/y}
-    */
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +58,13 @@ class MainActivity : AppCompatActivity() {
         println("Producto    7 * 7  = ${calculadora(7, 7, ::miltiplica)}")
         println("Division    12 / 3 = ${calculadora(12, 3, ::divide)}")
         */
+
+        //Lambdas
+        var funcion = { x: Int, y: Int -> x+y }
+        println("La suma de 80 y 20 con variable es: ${calculadora(80, 20, funcion)}")
+
+        funcion = { x: Int, y: Int -> x-y}
+        println("La resta de 50 y 20 con variable es: ${calculadora(80, 20, funcion)}")
 
     }
 }
