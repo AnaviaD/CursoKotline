@@ -18,13 +18,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel      :testViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         btn_buton       = findViewById(R.id.btn_button)
         tv_textView     = findViewById(R.id.tv_textView)
         tv_boolView     = findViewById(R.id.tv_booleanText)
-
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         //viewModel = ViewModelProvider(this).get(testViewModel::class.java)
         viewModel = ViewModelProvider(this)[testViewModel::class.java]
@@ -42,6 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun incrementText(){
         btn_buton?.setOnClickListener{
+            println("Boton presionado")
             viewModel.currentNumber.value       = ++viewModel.number
             viewModel.currentBoolean.value      = viewModel.number %2 == 0
         }
