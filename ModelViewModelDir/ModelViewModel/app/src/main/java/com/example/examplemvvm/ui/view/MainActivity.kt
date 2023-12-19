@@ -31,14 +31,15 @@ class MainActivity : AppCompatActivity() {
         //Para echar a andar un observer necesitamos mandarle this que quiere decir que nos pertenece
         //Teoria, podriamos intentar mandar otro activity o fragment como owner
         //currentQuote es el nuevo valor u objeto que se renovara por interaccion
-        quoteViewModel.quoteModel.observe(this, Observer { currentQuote ->
+        quoteViewModel.tractoModel.observe(this, Observer { currentQuote ->
+            println(currentQuote)
             //utilizamos el binding que no es mas que dejar de utilizar variables para los elementos
             //y tomarlos como tal por su id
             //currentQuote.quote tomamos el objeto actual y accedemos a sus propiedades
             //currentQuote.quote
             //currentQuote.author
-            binding.tvQuote.text = currentQuote.quote
-            binding.tvAuthor.text = currentQuote.author
+            //binding.tvQuote.text = currentQuote.quote
+            //binding.tvAuthor.text = currentQuote.author
         })
         //Lo que hace la funcion de arriba es que cada vez que exista un cambio, va a llegar aqui
         //lo que quiere decir que mantiene una linea de vida con respecto al activity y recibe cambios desde la capa de negocios o capa logica

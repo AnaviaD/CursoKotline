@@ -9,8 +9,8 @@ class BasicAuthInterceptor(username: String, password: String): Interceptor {
 
 
     override fun intercept(chain: Interceptor.Chain): Response {
-        var request = chain.request()
-        request = request.newBuilder()
+        var request =
+            chain.request().newBuilder()
             .header("Authorization", credentials)
             .addHeader("Connection", "close")
             .build()

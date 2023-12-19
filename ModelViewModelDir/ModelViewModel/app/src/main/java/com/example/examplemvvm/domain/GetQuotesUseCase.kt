@@ -1,5 +1,6 @@
 package com.example.examplemvvm.domain
 
+import com.example.examplemvvm.data.Class.TractoJson
 import com.example.examplemvvm.data.QuoteRepository
 import com.example.examplemvvm.data.model.QuoteModel
 
@@ -7,7 +8,7 @@ class GetQuotesUseCase {
 
     private val repository = QuoteRepository()
 
-    suspend operator fun invoke(): List<QuoteModel>? {
+    suspend operator fun invoke(): TractoJson? {
         return repository.getAllQuotes()
     }
 
