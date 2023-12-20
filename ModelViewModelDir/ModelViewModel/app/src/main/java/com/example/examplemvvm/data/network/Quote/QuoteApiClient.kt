@@ -1,4 +1,4 @@
-package com.example.examplemvvm.data.network
+package com.example.examplemvvm.data.network.Quote
 
 import com.example.examplemvvm.data.Class.TractoJson
 import com.example.examplemvvm.data.model.QuoteModel

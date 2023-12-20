@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         quoteViewModel.onCreate()
 
 
+
+
         //Accedemos a la capa logica
         //Para echar a andar un observer necesitamos mandarle this que quiere decir que nos pertenece
         //Teoria, podriamos intentar mandar otro activity o fragment como owner
@@ -53,6 +55,10 @@ class MainActivity : AppCompatActivity() {
             quoteViewModel.randomQuote()
         }
         */
+
+        quoteViewModel.userModel.observe(this, Observer { currentUser ->
+            println(currentUser)
+        })
 
     }
 }

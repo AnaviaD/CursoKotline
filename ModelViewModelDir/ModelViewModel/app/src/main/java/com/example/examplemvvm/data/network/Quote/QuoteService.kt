@@ -1,11 +1,9 @@
-package com.example.examplemvvm.data.network
+package com.example.examplemvvm.data.network.Quote
 
 import com.example.examplemvvm.core.RetrofitHelper
 import com.example.examplemvvm.data.Class.TractoJson
-import com.example.examplemvvm.data.model.QuoteModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import retrofit2.Response
 
 
 class QuoteService {
@@ -15,7 +13,7 @@ class QuoteService {
         return withContext(Dispatchers.IO)
         {
             val response = retrofit.create(QuoteApiClient::class.java).getAllQuotes()
-            response.body() ?: null
+            response.body()
         }
     }
 }
