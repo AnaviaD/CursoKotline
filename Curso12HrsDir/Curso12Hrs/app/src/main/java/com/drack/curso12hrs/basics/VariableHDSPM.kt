@@ -1,4 +1,4 @@
-package com.drack.curso12hrs
+package com.drack.curso12hrs.basics
 
 
 /*========== variables de la clase ==========*/
@@ -12,7 +12,7 @@ fun main()
 
     //Int -2, 147, 564, 0
     val age     :Int    = 5
-    val cAge = showMyAge(age)?: 1
+    val cAge = showMyAge(age) ?: 1
     println(cAge)
 
     //Long -9, 200, 66,

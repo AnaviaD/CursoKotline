@@ -1,4 +1,4 @@
-package com.drack.curso12hrs
+package com.drack.curso12hrs.basics
 
 fun main(){
     var name    :String ="ArisDevs"
