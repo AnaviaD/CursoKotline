@@ -56,6 +56,14 @@ class MainActivity : AppCompatActivity() {
         }
         */
 
+        binding.btnIntercambio.setOnClickListener{
+            quoteViewModel.llamarIntercambioWS()
+        }
+
+        binding.btnTest.setOnClickListener {
+            quoteViewModel.llamarTestWS()
+        }
+
         quoteViewModel.userModel.observe(this, Observer { currentUser ->
             println(currentUser)
         })

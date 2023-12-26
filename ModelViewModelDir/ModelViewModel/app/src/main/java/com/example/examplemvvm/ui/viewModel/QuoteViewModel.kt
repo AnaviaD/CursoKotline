@@ -7,6 +7,7 @@ import com.example.examplemvvm.data.Class.TractoJson
 import com.example.examplemvvm.data.Class.users
 import com.example.examplemvvm.data.model.QuoteModel
 import com.example.examplemvvm.domain.GetQuotesUseCase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class QuoteViewModel : ViewModel() {
@@ -28,8 +29,14 @@ class QuoteViewModel : ViewModel() {
             tractoModel.postValue(result)
         }
         */
+    }
 
-        viewModelScope.launch {
+    fun llamarIntercambioWS() {
+        TODO("Not yet implemented")
+    }
+
+    fun llamarTestWS() {
+        viewModelScope.launch(Dispatchers.Default ) {
             val result = getQuotesUseCase.getUsersNew()
             userModel.postValue(result)
         }
